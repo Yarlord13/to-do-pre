@@ -28,7 +28,8 @@ function createItem(item) {
 
   // Обработчик копирования задачи
   duplicateButton.addEventListener('click', () => {
-    const newItem = createItem(item);
+    const itemName = textElement.textContent;
+    const newItem = createItem(itemName);
     listElement.prepend(newItem);
     items = getTasksFromDOM();
     saveTasks(items);
